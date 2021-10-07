@@ -1,19 +1,26 @@
-# Example repo of using esmodules with Apps Script
+# Google Apps Script with Typescript
 
-Currently, Google Apps Script does **not** support ES modules. Hence the typical `export`/`import` pattern cannot be used and will fail.
+Google Apps Script does **not** support ES modules or Typescript. 
 
-The trick here is to make sure not to export any functions in your entry point code, e.g. `index.ts`, _and_ to prevent any generation of export statement in the final bundle (see the custom rollup plugin in [rollup.config.js](./rollup.config.js).
+Well, this template does! Check out these sick features, yo:
+
+* Typescript support!
+* `import` / `export` support
+* `npm` package support
 
 ## Usage
 
 * Add your script id to [.clasp.json](./.clasp.json)
 * Put your code into [index.ts](./src/index.ts)
 
-## Build
+> **Warning**: Make sure **not** to `export` any functions in your entry point code (`index.ts`)
+
+## Testing
+
+Run your build locally using:
 
 `npm run build`
 
-## Deploy
+Deploy to your sheet using: 
 
 `npm run deploy`
-
